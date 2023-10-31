@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.vertical-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    gap: 0.5rem;
+    /* background-color: #fdc9ff; */
+}
+
+.vertical-loader div {
+    background-color: red;
+    height: 100px;
+    width: 30px;
+}
+
+.spacer {
+    height: 300px;
+}
+
+@keyframes expander {
+    0%{
+        height: 100px;
+    }
+
+    50%{
+        height: 175px;
+    }
+
+    100%{
+        height: 300px;
+    }
+}
+
+.vertical-loader .first {
+    animation: expander 1.5s linear infinite;
+}
+
+.vertical-loader .second {
+    animation: expander 1s linear infinite;
+    animation-delay: 0.9s;
+}
+
+.vertical-loader .third {
+    animation: expander 3s linear infinite;
+    animation-delay: 1s;
+}
